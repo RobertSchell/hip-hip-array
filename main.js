@@ -1,39 +1,39 @@
-/* This assignment will give you some practice with creating arrays and using their methods. */
+  /* This assignment will give you some practice with creating arrays and using their methods. */
 
 
-console.log("Challenge 1");
-// ANY time you're asked to print something from the  array, do it with a loop, printing each item you're asked to print INDIVIDUALLY.
-// 
-// 
-//
-// Challenge 1
-//
-// Loop through the following array, console.logging out each value.
-const students = ['Tre','Sonny','Crystal','Ilyas','Greg','Fernando','Timothy','Patrick','Steve','Jimothy','Pat','Arnold','Andy'];
+  console.log("Challenge 1");
+  // ANY time you're asked to print something from the  array, do it with a loop, printing each item you're asked to print INDIVIDUALLY.
+  // 
+  // 
+  //
+  // Challenge 1
+  //
+  // Loop through the following array, console.logging out each value.
+  const students = ['Tre','Sonny','Crystal','Ilyas','Greg','Fernando','Timothy','Patrick','Steve','Jimothy','Pat','Arnold','Andy'];
   // Challenge 1 Code
 
-let i = 0
+  let i = 0
 
-while(i < students.length){
+  while(i < students.length){
     console.log(students[i])
     i++;
-}
+  }
 
 
-console.log("\n");
-console.log("Challenge 2");
-// Challenge 2
-// Loop through the following array BACKWARDS, console.logging out each value. 64 should be printed first and 100 last.
-const grades = [100, 80, 110, 75, 83, 64];
+  console.log("\n");
+  console.log("Challenge 2");
+  // Challenge 2
+  // Loop through the following array BACKWARDS, console.logging out each value. 64 should be printed first and 100 last.
+  const grades = [100, 80, 110, 75, 83, 64];
   //Challenge 2 Code
 
-let i = 0;
-let revGrades = grades.reverse();
+  let i = 0;
+  let revGrades = grades.reverse();
 
-while(i < revGrades.length){
+  while(i < revGrades.length){
     console.log(revGrades[i]);
     i++;
-} 
+  } 
 
 
   console.log("\n");
@@ -43,6 +43,7 @@ while(i < revGrades.length){
   const positiveNumbers = [5, 2, 13, 17, 4, 102, 3000];
   // Challenge 3 Code
 
+  //ORIGINAL SOLUTION USING .SPLICE
   positiveNumbers.splice(0,1)
   positiveNumbers.splice(1,2)
 
@@ -55,7 +56,20 @@ while(i < revGrades.length){
     i++;  
   }
 
+  //RE-WORKED SOLUTION AFTER IN CLASS REVIEW USING %
+  console.log("Challenge 3");
+  const positiveNumbers = [5, 2, 13, 17, 4, 102, 3000];
 
+  let i = 0
+  
+  while(i < positiveNumbers.length){
+    if(positiveNumbers[i] % 2 === 0){
+      console.log(positiveNumbers[i])
+    }
+    i++
+  }
+  
+  
   console.log("\n");
   console.log("Challenge 4");
   // Challenge 4
@@ -63,6 +77,7 @@ while(i < revGrades.length){
   const mixedSignNumbers = [3, 15, 14, -2, -3, -8, -103, 4];
   // Challenge 4 Code
 
+  //ORIGINAL SOLUTION USING .SPLICE
   mixedSignNumbers.splice(0,2)
   mixedSignNumbers.splice(2,1)
   mixedSignNumbers.splice(3,1)
@@ -76,6 +91,19 @@ while(i < revGrades.length){
     i++;  
   }
   
+  //RE-WORKED SOLUTION AFTER IN CLASS REVIEW USING %
+  console.log("Challenge 4");
+  const mixedSignNumbers = [3, 15, 14, -2, -3, -8, -103, 4];
+
+  let i = 0
+  
+  while(i < mixedSignNumbers.length){
+    if(mixedSignNumbers[i] % 2 === 0){
+      console.log(mixedSignNumbers[i])
+    }
+    i++
+  }
+
 
   console.log("\n");
   console.log("Challenge 5");
@@ -83,7 +111,8 @@ while(i < revGrades.length){
   // Remove two values from the beginning and one value from the end of the following array, simply by deleting them in the following line. Then console.log out each value individually.
   const symmetricalCapitals = ['A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y'];
   // Challenge 5 Code
-    
+  
+  //ORIGINAL SOLUTION USING .SPLICE/.POP
   symmetricalCapitals.splice(0,2)
   symmetricalCapitals.pop('Y')
   
@@ -94,6 +123,23 @@ while(i < revGrades.length){
     i++;  
   }
 
+  //RE-WORKED SOLUTION AFTER IN CLASS REVIEW USING THE .SHIFT/.POP METHODS
+  console.log("\n");
+  console.log("Challenge 5");
+  
+  const symmetricalCapitals = ['A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y'];  
+
+  symmetricalCapitals.shift("A");
+  symmetricalCapitals.shift("H");
+  symmetricalCapitals.pop('Y')
+
+  let i = 0
+  
+  while(i < symmetricalCapitals.length){
+    console.log(symmetricalCapitals[i]);
+    i++;  
+  }  
+
 
   console.log("\n");
   console.log("Challenge 6");
@@ -102,7 +148,7 @@ while(i < revGrades.length){
   const fibonacciNumbers = [1, 1, 2, 3, 5, 8, 13];
   // Challenge 6 Code
   
-  fibonacciNumbers.push(23,24)
+  fibonacciNumbers.push(21,34)
   fibonacciNumbers.unshift(0)
   
   let i = 0
@@ -124,7 +170,6 @@ while(i < revGrades.length){
   let i = 0
   
   while(i < newArray.length){
-    console.log(i);
     console.log(newArray[i]);
     i++;
   }
@@ -155,7 +200,7 @@ while(i < revGrades.length){
   // Loop through the `students` array from Challenge 1, starting at index 3 and ending at index 10 (INCLUSIVE), logging out each value individually.
   // Challenge 9 Code
   
- const students = ['Tre','Sonny','Crystal','Ilyas','Greg','Fernando','Timothy','Patrick','Steve','Jimothy','Pat','Arnold','Andy'];
+  const students = ['Tre','Sonny','Crystal','Ilyas','Greg','Fernando','Timothy','Patrick','Steve','Jimothy','Pat','Arnold','Andy'];
   
   let i = 3
   
@@ -180,13 +225,6 @@ while(i < revGrades.length){
 
   let i = 0
 
-  while(i < students.length){
-    console.log(students[i]);
-    i++;  
-}
-
-let students2 = ['Tre','Sonny','Crystal','Ilyas','Greg','Fernando','Timothy','Patrick','Steve','Jimothy','Pat','Arnold','Andy'];
-
   while(i < copy.length){
     console.log(copy[i]);
     i++;
@@ -199,7 +237,7 @@ let students2 = ['Tre','Sonny','Crystal','Ilyas','Greg','Fernando','Timothy','Pa
   // Make a COPY of the `students` array *using .slice*, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy individually. THEN log out each value of the original array. Notice that the original array didn't get any values taken out of it, because `slice` does NOT modify the original array.
   // Challenge 11 Code
   
-const students = ['Tre','Sonny','Crystal','Ilyas','Greg','Fernando','Timothy','Patrick','Steve','Jimothy','Pat','Arnold','Andy'];
+  const students = ['Tre','Sonny','Crystal','Ilyas','Greg','Fernando','Timothy','Patrick','Steve','Jimothy','Pat','Arnold','Andy'];
   
   let copy = students.slice(3,11)
   console.log(copy)
